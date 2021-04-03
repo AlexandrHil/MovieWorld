@@ -20,6 +20,7 @@
 		03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C41DF72615FD6C0055D985 /* MWMoviesController.swift */; };
 		03C41E1326163FCA0055D985 /* MWMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C41E1226163FCA0055D985 /* MWMovieModel.swift */; };
 		03C41E1726163FEE0055D985 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C41E1626163FEE0055D985 /* Date+Ex.swift */; };
+		FA3BF377261649760079FA80 /* MWMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BF376261649760079FA80 /* MWMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		03C41DF72615FD6C0055D985 /* MWMoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMoviesController.swift; sourceTree = "<group>"; };
 		03C41E1226163FCA0055D985 /* MWMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovieModel.swift; sourceTree = "<group>"; };
 		03C41E1626163FEE0055D985 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		FA3BF376261649760079FA80 /* MWMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		03C41DD72615DE3A0055D985 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA3BF3752616494D0079FA80 /* Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,14 @@
 				03C41E1226163FCA0055D985 /* MWMovieModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA3BF3752616494D0079FA80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3BF376261649760079FA80 /* MWMovieCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */,
 				03C41DBD2615DBFC0055D985 /* MWViewController.swift in Sources */,
+				FA3BF377261649760079FA80 /* MWMovieCell.swift in Sources */,
 				03C41E1326163FCA0055D985 /* MWMovieModel.swift in Sources */,
 				03C41E1726163FEE0055D985 /* Date+Ex.swift in Sources */,
 				03C41DE12615E13B0055D985 /* UIEdgeInsets+Ex.swift in Sources */,

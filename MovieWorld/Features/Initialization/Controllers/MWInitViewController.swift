@@ -45,6 +45,7 @@ class MWInitViewController: MWViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        //крутелка загрузки
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.indicator.stopAnimating()
 
