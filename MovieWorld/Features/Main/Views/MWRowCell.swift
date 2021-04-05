@@ -108,6 +108,7 @@ extension MWRowCell: UICollectionViewDelegate, UICollectionViewDataSource {
         return self.movies.count
     }
 
+    //настройка ячейки
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MWMainMovieCell.reuseIdentifier, for: indexPath) as? MWMainMovieCell ?? MWMainMovieCell()
         cell.set(movie: self.movies[indexPath.row])

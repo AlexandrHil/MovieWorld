@@ -11,11 +11,12 @@ class MWMainViewController: MWViewController {
 
     enum MovieCategory: String {
         case popular = "Popular"
+        case upcoming = "Upcoming"
     }
 
     private var movies: [MovieCategory: [MWMovie]] = [:]
 
-    private lazy var refreshControl: UIRefreshControl = {
+    private lazy var refreshControl: UIRefreshControl = {   // обновляет если потянул вниз
         let control = UIRefreshControl()
         control.tintColor = UIColor(named: "accentColor")
         control.addTarget(self, action: #selector(refreshPulled),
@@ -48,12 +49,41 @@ class MWMainViewController: MWViewController {
         self.tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+
+        self.sendPopularRequest()
     }
 
     @objc private func refreshPulled() {
         // refresh logic
     }
 
+//    private func sendUpcomingRequest() {
+//        MWNetwork.sh.request(urlPath: MWUrlPaths.upcomingMovies) , parameters: <#T##[String : String]?#>, okHandler: <#T##(Decodable) -> Void#>, errorHandler: <#T##() -> Void#>)
+//    }
+
+    private func sendPopularRequest() {
+        MWNetwork.sh.request(urlPath: MWUrlPaths.popularMovies) { [weak self]
+            (popularMoviesModel: MWPopularMoviesResponse) in
+            guard let self = self else { return }
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            self.movies[.popular] = popularMoviesModel.results
+            self.movies[.upcoming] = popularMoviesModel.results
+            self.tableView.reloadData()
+
+            popularMoviesModel.results.forEach {
+                Swift.debugPrint("id: \($0.id)")
+                Swift.debugPrint($0.title)
+                Swift.debugPrint($0.overview ?? "No overview")
+            }
+
+        } errorHandler: {
+            print("errorHandler")
+            // TODO - show alert controller
+
+        }
+    }
 }
 
 extension MWMainViewController: UITableViewDelegate, UITableViewDataSource {
