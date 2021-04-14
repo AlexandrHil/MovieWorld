@@ -36,6 +36,13 @@
 		03E0A867261B51F800BD04B4 /* MWUrlPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A866261B51F800BD04B4 /* MWUrlPaths.swift */; };
 		03E0A86B261B5DDE00BD04B4 /* MWCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A86A261B5DDE00BD04B4 /* MWCaller.swift */; };
 		03E59DF62623A0F800787195 /* MWFavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E59DF52623A0F800787195 /* MWFavouriteViewController.swift */; };
+		FACE8C7C2624B3EC00900B95 /* MWDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C7A2624B3EC00900B95 /* MWDataModel.xcdatamodeld */; };
+		FACE8C8D2624B9B800900B95 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C8B2624B9B800900B95 /* Movie+CoreDataClass.swift */; };
+		FACE8C8E2624B9B800900B95 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C8C2624B9B800900B95 /* Movie+CoreDataProperties.swift */; };
+		FACE8C972624BD3E00900B95 /* MWDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C962624BD3E00900B95 /* MWDatabase.swift */; };
+		FACE8C9D2624CF8700900B95 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C9A2624CF8700900B95 /* Category+CoreDataClass.swift */; };
+		FACE8C9E2624CF8700900B95 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE8C9B2624CF8700900B95 /* Category+CoreDataProperties.swift */; };
+		FACE8CA72624D17500900B95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FACE8CA92624D17500900B95 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,15 @@
 		03E0A866261B51F800BD04B4 /* MWUrlPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWUrlPaths.swift; sourceTree = "<group>"; };
 		03E0A86A261B5DDE00BD04B4 /* MWCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWCaller.swift; sourceTree = "<group>"; };
 		03E59DF52623A0F800787195 /* MWFavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWFavouriteViewController.swift; sourceTree = "<group>"; };
+		FACE8C7B2624B3EC00900B95 /* MWDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MWDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FACE8C8B2624B9B800900B95 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FACE8C8C2624B9B800900B95 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FACE8C962624BD3E00900B95 /* MWDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWDatabase.swift; sourceTree = "<group>"; };
+		FACE8C9A2624CF8700900B95 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FACE8C9B2624CF8700900B95 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FACE8CA52624D14200900B95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FACE8CA82624D17500900B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FACE8CAB2624D18100900B95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +163,7 @@
 		03C41DD52615DE2D0055D985 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FACE8C792624B3C200900B95 /* CoreData */,
 				03E0A869261B5DD200BD04B4 /* Sharing */,
 				03E0A856261B4EC300BD04B4 /* Network */,
 				03C41DE32615E1AA0055D985 /* Navigation */,
@@ -175,6 +192,7 @@
 		03C41DD82615DE440055D985 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FACE8CA12624D09600900B95 /* Localization */,
 				03C41DC32615DBFE0055D985 /* LaunchScreen.storyboard */,
 				03C41DC12615DBFE0055D985 /* Assets.xcassets */,
 				03C41DF22615FCAB0055D985 /* Colors.xcassets */,
@@ -336,6 +354,27 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FACE8C792624B3C200900B95 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FACE8C9A2624CF8700900B95 /* Category+CoreDataClass.swift */,
+				FACE8C9B2624CF8700900B95 /* Category+CoreDataProperties.swift */,
+				FACE8C8B2624B9B800900B95 /* Movie+CoreDataClass.swift */,
+				FACE8C8C2624B9B800900B95 /* Movie+CoreDataProperties.swift */,
+				FACE8C7A2624B3EC00900B95 /* MWDataModel.xcdatamodeld */,
+				FACE8C962624BD3E00900B95 /* MWDatabase.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FACE8CA12624D09600900B95 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FACE8CA92624D17500900B95 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +420,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 03C41DAC2615DBFC0055D985;
 			packageReferences = (
@@ -402,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C41DF32615FCAB0055D985 /* Colors.xcassets in Resources */,
+				FACE8CA72624D17500900B95 /* Localizable.strings in Resources */,
 				03C41DC52615DBFE0055D985 /* LaunchScreen.storyboard in Resources */,
 				03C41DC22615DBFE0055D985 /* Assets.xcassets in Resources */,
 			);
@@ -416,24 +457,30 @@
 			files = (
 				03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */,
 				03C41DBD2615DBFC0055D985 /* MWViewController.swift in Sources */,
+				FACE8C9E2624CF8700900B95 /* Category+CoreDataProperties.swift in Sources */,
 				03E0A858261B4ED700BD04B4 /* MWNetwork.swift in Sources */,
 				03E0A8322616495C00BD04B4 /* MWMovieCell.swift in Sources */,
 				03C41E1326163FCA0055D985 /* MWMovieModel.swift in Sources */,
 				03E0A83F261B47BE00BD04B4 /* MWMainViewController.swift in Sources */,
 				03E0A84A261B486000BD04B4 /* MWMovie.swift in Sources */,
 				03E0A847261B484800BD04B4 /* MWMainMovieCell.swift in Sources */,
+				FACE8C972624BD3E00900B95 /* MWDatabase.swift in Sources */,
 				03C41E1726163FEE0055D985 /* Date+Ex.swift in Sources */,
 				03C41DE12615E13B0055D985 /* UIEdgeInsets+Ex.swift in Sources */,
 				03E59DF62623A0F800787195 /* MWFavouriteViewController.swift in Sources */,
+				FACE8C9D2624CF8700900B95 /* Category+CoreDataClass.swift in Sources */,
 				03E0A867261B51F800BD04B4 /* MWUrlPaths.swift in Sources */,
 				03C41DB92615DBFC0055D985 /* AppDelegate.swift in Sources */,
 				03E0A864261B50CA00BD04B4 /* Url+Ex.swift in Sources */,
 				03E0A839261B476000BD04B4 /* MWMainTabBarController.swift in Sources */,
+				FACE8C7C2624B3EC00900B95 /* MWDataModel.xcdatamodeld in Sources */,
 				03C41DE82615F0CD0055D985 /* MWInterface.swift in Sources */,
 				03C41DEF2615FAE10055D985 /* MWInitViewController.swift in Sources */,
+				FACE8C8D2624B9B800900B95 /* Movie+CoreDataClass.swift in Sources */,
 				03E0A844261B482C00BD04B4 /* MWRowCell.swift in Sources */,
 				03BC4FD4261F48C100FFE6AF /* MWUpcomingResponseModel.swift in Sources */,
 				03E0A860261B4F3300BD04B4 /* MWErrors.swift in Sources */,
+				FACE8C8E2624B9B800900B95 /* Movie+CoreDataProperties.swift in Sources */,
 				03BC4FD5261F48C100FFE6AF /* MWTopRatedReponseModel.swift in Sources */,
 				03BC4FD6261F48C100FFE6AF /* MWPopularMovieResponse.swift in Sources */,
 				03E0A86B261B5DDE00BD04B4 /* MWCaller.swift in Sources */,
@@ -448,8 +495,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				03C41DC42615DBFE0055D985 /* Base */,
+				FACE8CA52624D14200900B95 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FACE8CA92624D17500900B95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACE8CA82624D17500900B95 /* en */,
+				FACE8CAB2624D18100900B95 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -520,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -667,6 +726,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FACE8C7A2624B3EC00900B95 /* MWDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FACE8C7B2624B3EC00900B95 /* MWDataModel.xcdatamodel */,
+			);
+			currentVersion = FACE8C7B2624B3EC00900B95 /* MWDataModel.xcdatamodel */;
+			path = MWDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03C41DAD2615DBFC0055D985 /* Project object */;
 }

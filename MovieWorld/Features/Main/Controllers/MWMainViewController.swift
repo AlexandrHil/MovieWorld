@@ -45,7 +45,8 @@ class MWMainViewController: MWViewController {
     override func initController() {
         super.initController()
 
-        self.controllerTitle = "Main"
+//        self.controllerTitle = "Main"
+        self.controllerTitle = NSLocalizedString("Main title", comment: "")
 
         self.view.addSubview(self.tableView)
 

@@ -10,10 +10,10 @@ import UIKit
 class MWMovie: Decodable {
     let id: Int
     let title: String
-    let overview: String?
-    var adult: Bool
-    var voteCount: Int
-    var popularity: Double
+    var overview: String?
+    var adult: Bool?
+    var voteCount: Int?
+    var popularity: Double?
     var genreIds: [Int]?
     var releaseDate: String?
     // let release_date: Date
@@ -31,6 +31,13 @@ class MWMovie: Decodable {
         case releaseDate = "release_date"
         case posterPath = "poster_path"
         case overview
+    }
+
+    // MARK: - initializators
+
+    init(id: Int, title: String) {
+        self.id = id
+        self.title = title
     }
 
     required init(from decoder: Decoder) throws {
