@@ -13,7 +13,7 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="movie" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-353.703369140625" positionY="-130.1387939453125" width="128" height="133"/>
         <element name="Category" positionX="-54" positionY="27" width="128" height="73"/>
+        <element name="Movie" positionX="-353.703369140625" positionY="-130.1387939453125" width="128" height="119"/>
     </elements>
 </model>
